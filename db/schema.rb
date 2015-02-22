@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20150221234450) do
   create_table "scores", force: :cascade do |t|
     t.string   "player_name",  limit: 255, null: false
     t.integer  "amount",       limit: 4,   null: false
+    t.string   "device_id",    limit: 255, null: false
     t.string   "ip",           limit: 255
     t.string   "device_model", limit: 255
     t.string   "device_type",  limit: 255

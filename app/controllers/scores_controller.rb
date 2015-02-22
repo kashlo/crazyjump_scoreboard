@@ -7,7 +7,7 @@ class ScoresController < ApplicationController
   end
 
   def create
-    @score = Score.create(score_params)
+    @score = Score.create(score_params.merge(ip: request.remote_ip))
     respond_with @score
   end
 
@@ -19,7 +19,7 @@ class ScoresController < ApplicationController
     private
 
       def score_params
-        params.permit(:player_name, :amount, :token, :ip, :device_model, :device_type)
+        params.permit(:player_name, :amount, :token, :device_model, :device_id, :device_type)
       end
 
 end
