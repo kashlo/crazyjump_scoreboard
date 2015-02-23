@@ -12,11 +12,6 @@ module Api
       respond_with @score
     end
 
-    def show
-      @score = Score.find(params[:id])
-      respond_with @score
-    end
-
       private
 
         def score_params

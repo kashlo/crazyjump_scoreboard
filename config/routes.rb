@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'scores#index'
 
   namespace :api do
-    resources :scores, only: [:create, :index, :show]
+    resources :scores, only: [:create, :index]
   end
 
   resources :scores, only: :index
