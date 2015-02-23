@@ -12,6 +12,7 @@
         %th IP
         %th Device
         %th Device model
+        %th Date created
 
     %tbody
       - @scores.each do |score|
@@ -21,6 +22,7 @@
           %td= score.ip
           %td= score.device_model
           %td= score.device_type
+          %td= score.created_at.to_date
 
 .row
   .col-md-6
