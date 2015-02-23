@@ -1,0 +1,25 @@
+.row
+  .col-md-6
+    %h3 All scores
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Player name
+        %th Score
+        %th IP
+        %th Device
+        %th Device model
+
+    %tbody
+      - @scores.each do |score|
+        %tr
+          %td= score.player_name
+          %td= score.amount
+          %td= score.ip
+          %td= score.device_model
+          %td= score.device_type
+
+.row
+  .col-md-6
+    =paginate @scores
